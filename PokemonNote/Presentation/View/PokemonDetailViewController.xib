@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PokemonDetailViewController" customModule="PokemonNote" customModuleProvider="target">
             <connections>
+                <outlet property="basicInfoStackView" destination="RDp-ce-FUU" id="MMm-cU-t5d"/>
                 <outlet property="heightLabel" destination="dqQ-sO-y1U" id="fS7-bJ-RK7"/>
                 <outlet property="mapButton" destination="rg8-eu-lUS" id="TuB-qp-7Ay"/>
                 <outlet property="nameLabel" destination="kG2-ky-lLu" id="vkx-iU-eKa"/>
@@ -34,7 +35,7 @@
                                 <constraint firstAttribute="width" constant="250" id="qMd-0y-H9z"/>
                             </constraints>
                         </imageView>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="RDp-ce-FUU" userLabel="Basic info Stack View">
+                        <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="RDp-ce-FUU" userLabel="Basic info Stack View">
                             <rect key="frame" x="87" y="286" width="240" height="129"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="피카츄" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kG2-ky-lLu" userLabel="nameLabel">

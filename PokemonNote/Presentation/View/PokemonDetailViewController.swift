@@ -18,6 +18,7 @@ class PokemonDetailViewController: UIViewController {
     @IBOutlet weak var weightLabel: UILabel!
     @IBOutlet weak var noLocationLabel: UILabel!
     @IBOutlet weak var mapButton: UIButton!
+    @IBOutlet weak var basicInfoStackView: UIStackView!
     
     
     //MARK: - Life Cycle
@@ -55,6 +56,8 @@ class PokemonDetailViewController: UIViewController {
             } else {
                 
             }
+            
+            self?.basicInfoStackView.isHidden = false
         }.disposed(by: bag)
         
         // Map Button
