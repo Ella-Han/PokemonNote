@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PokemonListViewController" customModule="PokemonNote" customModuleProvider="target">
+            <connections>
+                <outlet property="noResultDisplayView" destination="vAi-Nv-gmZ" id="u2S-p3-AOK"/>
+                <outlet property="pokemonTableView" destination="erc-og-QG6" id="g0u-dU-Mx7"/>
+                <outlet property="searchBar" destination="kuU-VL-ys4" id="hGU-Qs-UMu"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zqu-bW-RiY" userLabel="Search View">
+                    <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                    <subviews>
+                        <searchBar contentMode="redraw" placeholder="포켓몬 이름으로 검색" translatesAutoresizingMaskIntoConstraints="NO" id="kuU-VL-ys4">
+                            <rect key="frame" x="16" y="0.0" width="382" height="56"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="kuU-VL-ys4" secondAttribute="trailing" constant="16" id="h4d-3T-ESU"/>
+                        <constraint firstItem="kuU-VL-ys4" firstAttribute="centerY" secondItem="zqu-bW-RiY" secondAttribute="centerY" id="poh-1L-yrx"/>
+                        <constraint firstAttribute="height" constant="56" id="uIv-ri-kUT"/>
+                        <constraint firstItem="kuU-VL-ys4" firstAttribute="leading" secondItem="zqu-bW-RiY" secondAttribute="leading" constant="16" id="yEV-dx-fbz"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" style="plain" separatorStyle="none" rowHeight="72" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="erc-og-QG6">
+                    <rect key="frame" x="0.0" y="100" width="414" height="762"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vAi-Nv-gmZ" userLabel="no Result Display View" customClass="NoResultDisplayView" customModule="PokemonNote" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="100" width="414" height="762"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="khl-2S-B3L"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="erc-og-QG6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="B3h-nR-u0H"/>
+                <constraint firstItem="vAi-Nv-gmZ" firstAttribute="bottom" secondItem="erc-og-QG6" secondAttribute="bottom" id="Lbg-qX-odD"/>
+                <constraint firstAttribute="trailing" secondItem="zqu-bW-RiY" secondAttribute="trailing" id="UDC-ZO-8Mz"/>
+                <constraint firstItem="khl-2S-B3L" firstAttribute="top" secondItem="zqu-bW-RiY" secondAttribute="top" id="YA6-y1-twB"/>
+                <constraint firstItem="erc-og-QG6" firstAttribute="bottom" secondItem="khl-2S-B3L" secondAttribute="bottom" id="emZ-la-GLu"/>
+                <constraint firstAttribute="trailing" secondItem="erc-og-QG6" secondAttribute="trailing" id="fKC-9K-c07"/>
+                <constraint firstItem="vAi-Nv-gmZ" firstAttribute="trailing" secondItem="erc-og-QG6" secondAttribute="trailing" id="hyW-BG-6Vu"/>
+                <constraint firstItem="vAi-Nv-gmZ" firstAttribute="leading" secondItem="erc-og-QG6" secondAttribute="leading" id="jrw-C4-ApD"/>
+                <constraint firstItem="zqu-bW-RiY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="oor-dc-n9k"/>
+                <constraint firstItem="erc-og-QG6" firstAttribute="top" secondItem="zqu-bW-RiY" secondAttribute="bottom" id="q1V-ge-BTg"/>
+                <constraint firstItem="vAi-Nv-gmZ" firstAttribute="top" secondItem="erc-og-QG6" secondAttribute="top" id="wfT-Wd-5ol"/>
+            </constraints>
+            <point key="canvasLocation" x="28" y="76"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PokemonDetailViewController" customModule="PokemonNote" customModuleProvider="target">
+            <connections>
+                <outlet property="heightLabel" destination="dqQ-sO-y1U" id="fS7-bJ-RK7"/>
+                <outlet property="mapButton" destination="rg8-eu-lUS" id="TuB-qp-7Ay"/>
+                <outlet property="nameLabel" destination="kG2-ky-lLu" id="vkx-iU-eKa"/>
+                <outlet property="noLocationLabel" destination="8Cx-2z-hEG" id="mCY-Ek-2uZ"/>
+                <outlet property="profileImageView" destination="bMx-qi-XeS" id="53b-ml-wOq"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="weightLabel" destination="wYt-u2-1t4" id="Cfa-V9-Stk"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1NB-WK-iCZ">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no_profile_image" translatesAutoresizingMaskIntoConstraints="NO" id="bMx-qi-XeS" userLabel="Profile Image View">
+                            <rect key="frame" x="82" y="16" width="250" height="250"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="250" id="OK3-Qj-Ct5"/>
+                                <constraint firstAttribute="width" constant="250" id="qMd-0y-H9z"/>
+                            </constraints>
+                        </imageView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="RDp-ce-FUU" userLabel="Basic info Stack View">
+                            <rect key="frame" x="87" y="286" width="240" height="129"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="피카츄" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kG2-ky-lLu" userLabel="nameLabel">
+                                    <rect key="frame" x="0.0" y="0.0" width="240" height="25.5"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bSx-iH-baj" userLabel="Horizontal Line View">
+                                    <rect key="frame" x="0.0" y="35.5" width="240" height="2"/>
+                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="2" id="TjW-9G-eHe"/>
+                                    </constraints>
+                                </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="키: 4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dqQ-sO-y1U" userLabel="heightLabel">
+                                    <rect key="frame" x="0.0" y="47.5" width="240" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="몸무게: 60" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wYt-u2-1t4" userLabel="weightLabel">
+                                    <rect key="frame" x="0.0" y="78" width="240" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="특징: 서식지 알려져 있지 않음" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Cx-2z-hEG" userLabel="noLocationLabel">
+                                    <rect key="frame" x="0.0" y="108.5" width="240" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rg8-eu-lUS" userLabel="Map Button">
+                            <rect key="frame" x="20" y="445" width="374" height="55"/>
+                            <color key="backgroundColor" systemColor="systemYellowColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="55" id="NXc-tD-4QA"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="-20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" title="서식지 보기" image="checkmark.circle" catalog="system">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="bMx-qi-XeS" firstAttribute="top" secondItem="1NB-WK-iCZ" secondAttribute="top" constant="16" id="A3j-Le-Xka"/>
+                        <constraint firstItem="rg8-eu-lUS" firstAttribute="leading" secondItem="1NB-WK-iCZ" secondAttribute="leading" constant="20" id="HBf-3i-0LR"/>
+                        <constraint firstItem="RDp-ce-FUU" firstAttribute="centerX" secondItem="bMx-qi-XeS" secondAttribute="centerX" id="NsB-IB-8V9"/>
+                        <constraint firstItem="bMx-qi-XeS" firstAttribute="centerX" secondItem="1NB-WK-iCZ" secondAttribute="centerX" id="RLl-RG-oaM"/>
+                        <constraint firstItem="RDp-ce-FUU" firstAttribute="top" secondItem="bMx-qi-XeS" secondAttribute="bottom" constant="20" id="czE-lH-eH5"/>
+                        <constraint firstItem="rg8-eu-lUS" firstAttribute="top" secondItem="RDp-ce-FUU" secondAttribute="bottom" constant="30" id="n24-KQ-0mf"/>
+                        <constraint firstAttribute="trailing" secondItem="rg8-eu-lUS" secondAttribute="trailing" constant="20" id="sUH-Um-LUD"/>
+                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="RDp-ce-FUU" secondAttribute="trailing" id="ygD-rg-zzf"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="zOk-JB-vUP"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="1NB-WK-iCZ" firstAttribute="top" secondItem="zOk-JB-vUP" secondAttribute="top" id="8PD-Ba-gV3"/>
+                <constraint firstItem="zOk-JB-vUP" firstAttribute="bottom" secondItem="1NB-WK-iCZ" secondAttribute="bottom" id="HZf-uz-RX6"/>
+                <constraint firstItem="1NB-WK-iCZ" firstAttribute="leading" secondItem="zOk-JB-vUP" secondAttribute="leading" id="M9V-Bd-tur"/>
+                <constraint firstItem="zOk-JB-vUP" firstAttribute="trailing" secondItem="1NB-WK-iCZ" secondAttribute="trailing" id="hwm-c1-R5v"/>
+            </constraints>
+            <point key="canvasLocation" x="-7" y="83"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="checkmark.circle" catalog="system" width="128" height="121"/>
+        <image name="no_profile_image" width="112.5" height="112.5"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
