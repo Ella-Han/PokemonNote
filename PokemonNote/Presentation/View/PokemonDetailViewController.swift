@@ -48,11 +48,11 @@ class PokemonDetailViewController: UIViewController {
             
             if let frontDefaultUrl = pokemonModel.sprites?[.front_default] as? String {
                 self?.profileImageView.kf.indicatorType = .activity
-                self?.profileImageView.kf.setImage(with: URL(string: frontDefaultUrl)!, placeholder: nil, options: [.transition(.fade(0.3))], completionHandler: nil)
+                self?.profileImageView.kf.setImage(with: URL(string: frontDefaultUrl)!, placeholder: nil, options: [.transition(.fade(0.3)), .cacheMemoryOnly], completionHandler: nil)
             } else if let randomUrl = pokemonModel.sprites?.values.compactMap({ $0
             }).first {
                 self?.profileImageView.kf.indicatorType = .activity
-                self?.profileImageView.kf.setImage(with: URL(string: randomUrl)!, placeholder: nil, options: [.transition(.fade(0.3))], completionHandler: nil)
+                self?.profileImageView.kf.setImage(with: URL(string: randomUrl)!, placeholder: nil, options: [.transition(.fade(0.3)), .cacheMemoryOnly], completionHandler: nil)
             } else {
                 
             }
